@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Emprunts</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Gestion des Emprunts</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="adherents.html">Adhérents</a>
+        <a href="livres.html">Livres</a>
+
+    </nav>
+
+    <form id="empruntForm">
+        <label for="adherentSelect">Sélectionner un adhérent :</label>
+        <select id="adherentSelect" name="adherent_id" required></select>
+
+        <label for="livreSelect">Sélectionner un livre :</label>
+        <select id="livreSelect" name="document_id" required></select>
+
+        <label for="dateRetour">Date de retour :</label>
+        <input type="date" id="dateRetour" name="date_retour" required>
+
+        <button type="submit">Enregistrer l'emprunt</button>
+    </form>
+
+    <h2>Liste des Emprunts</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Adhérent</th>
+                <th>Document</th>
+                <th>Date d'emprunt</th>
+                <th>Date de retour</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+        <tbody id="empruntsTable"></tbody>
+    </table>
+
+    <script src="js.js"></script>
+</body>
+</html>

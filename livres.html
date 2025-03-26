@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Livres</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Gestion des Livres</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="adherents.html">Adhérents</a>
+        <a href="emprunts.html">Emprunts</a>
+
+    </nav>
+
+
+    <form id="livreForm">
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" required>
+
+        <label for="auteur">Auteur :</label>
+        <input type="text" id="auteur" name="auteur" required>
+
+        <label for="type">Type :</label>
+        <input type="text" id="type" name="type" required>
+
+        <label for="type">ISBN :</label>
+        <input type="text" id="isbn" name="isbn" required>
+
+        <button type="submit">Ajouter Livre</button>
+    </form>
+
+    <h2>Importer des Livres (CSV)</h2>
+    <form id="csvForm" enctype="multipart/form-data">
+        <label for="csvFile">Fichier CSV :</label>
+        <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+        <button type="submit">Importer</button>
+    </form>
+
+    <h2>Liste des Livres</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="livresTable"></tbody>
+    </table>
+
+    <script src="js.js"></script>
+</body>
+</html>

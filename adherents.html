@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Adhérents</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Gestion des Adhérents</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="emprunts.html">Emprunts</a>
+        <a href="livres.html">Livres</a>
+
+    </nav>
+
+    <form id="adherentForm">
+        <label for="code">Code :</label>
+        <input type="text" id="code" name="code" required>
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" required>
+
+        <label for="tel">Téléphone :</label>
+        <input type="text" id="tel" name="tel" required>
+
+        <label for="typeAdh">Type :</label>
+        <select id="typeAdh" name="type" required>
+            <option value="etudiant">Étudiant</option>
+            <option value="professeur">Professeur</option>
+            <option value="personne">Personne</option>
+        </select>
+
+        <button type="submit">Ajouter Adhérent</button>
+    </form>
+
+    <h2>Liste des Adhérents</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="adherentsTable"></tbody>
+    </table>
+
+    <script src="js.js"></script>
+</body>
+</html>
